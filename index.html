@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <style>
+      .grid-container {
+        display: grid;
+        column-gap: 5px;
+        grid-template-columns: auto auto;
+      }
+      .grid-container2 {
+        display: inline;
+      }
+      text {
+        font-family: Arial;
+        cursor: pointer;
+      }
+      div {
+        font-family: Arial;
+      }
+      circle {
+        cursor: pointer;
+      }
+      .item1 {
+        grid-column: 1 / 3;
+      }
+      .layoutInfo1 {
+        cursor: default;
+        font-family: Arial;
+        font-weight: bold;
+        font-size: 40px;
+      }
+      button {
+        position: absolute;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        border-radius: 4px;
+        background-color: white;
+        color: black;
+        border: 2px solid #555555;
+        transition-duration: 0.4s;
+      }
+      button:hover {
+        background-color: #555555;
+        color: white;
+      }
+      .btn1 {
+        visibility: hidden;
+        top: 20px;
+        left: 20px;
+      }
+      .btn2 {
+        top: 20px;
+        right: 5px;
+      }
+      .selection1 {
+        position: absolute;
+        top: 53%;
+        left: 45%;
+      }
+      .selection2 {
+        position: absolute;
+        top: 53%;
+        left: 52%;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Buttons -->
+    <button
+      type="button"
+      onclick="updateCircles(byMake, true), udpateGraph(filterGraphData()), updatePie(filterPieData())"
+      class="btn1"
+    >
+      Back
+    </button>
+    <button type="button" class="btn2" onclick="toggleBrush()">
+      Enable Selection
+    </button>
+
+    <!-- Layout Containers -->
+    <div id="main" class="grid-container">
+      <div class="item1" id="circleLayout"></div>
+      <div id="graphLayout"></div>
+      <div id="pieLayout"></div>
+    </div>
+
+    <!-- Script Files -->
+    <script src="main.js"></script>
+    <script src="circleLayout.js"></script>
+    <script src="graph.js"></script>
+    <script src="dropdown.js"></script>
+    <script src="pie.js"></script>
+  </body>
+</html>
