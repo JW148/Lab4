@@ -31,15 +31,15 @@ Promise.all([
   // NOTE: all objects in these csv files have the same keys/columns
   // model, year, price, transmission, mileage, fuelType, tax, mpg, engineSize
   // BUT for the hyundi.csv file tax -> tax(£)
-  d3.csv("/data/audi.csv"),
-  d3.csv("/data/bmw.csv"),
-  d3.csv("/data/ford.csv"),
-  d3.csv("/data/hyundi.csv"),
-  d3.csv("/data/merc.csv"),
-  d3.csv("/data/skoda.csv"),
-  d3.csv("/data/toyota.csv"),
-  d3.csv("/data/vauxhall.csv"),
-  d3.csv("/data/vw.csv"),
+  d3.csv("data/audi.csv"),
+  d3.csv("data/bmw.csv"),
+  d3.csv("data/ford.csv"),
+  d3.csv("data/hyundi.csv"),
+  d3.csv("data/merc.csv"),
+  d3.csv("data/skoda.csv"),
+  d3.csv("data/toyota.csv"),
+  d3.csv("data/vauxhall.csv"),
+  d3.csv("data/vw.csv"),
 ]).then(function (data) {
   byMake.push({ make: "Audi", data: data[0], sold: data[0].length });
   byMake.push({ make: "BMW", data: data[1], sold: data[1].length });
